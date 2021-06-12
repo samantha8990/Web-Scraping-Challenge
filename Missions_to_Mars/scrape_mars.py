@@ -6,6 +6,7 @@ import pandas as pd
 executable_path = {'executable_path': ChromeDriverManager().install()}
 browser = Browser('chrome', **executable_path, headless=False)
 
+
 url = 'https://mars.nasa.gov/news/'
 browser.visit(url)
 
@@ -21,6 +22,7 @@ paragraph=soup.find_all('div', class_='article_teaser_body')
 #assign variables
 news_title=titles[0].text
 news_paragraph=paragraph[0].text
+
 
 #Mars Image
 urls = 'https://data-class-jpl-space.s3.amazonaws.com/JPL_Space/index.html'
@@ -63,7 +65,18 @@ for each_image in hemisphere_image_url:
     each_image['url']=browser.find_by_text('Sample').first['href']
     browser.back()
 
+mars_data={
+    "news_title": news_title,
+    "news_paragraph": news_paragraph,
+    "full_url":full_url,
+    "data_frame":data_frame,
+    "hemispheres":hemisphere_image_url
+
+}
+
 browser.quit()
+
+
 
 
 

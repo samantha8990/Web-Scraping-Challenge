@@ -1,12 +1,31 @@
+<!DOCTYPE html>
 <html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <title>Mars Facts</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+    <h1>Mission to Mars</h1>
+    <p><a class="btn btn-primary btn-lg" style="background-color: #FF9D6F; border: 0px;" href="http://127.0.0.1:5000/scrape" role="button">Scrape New Data!</a></p>
+    <hr>
+
+<div class="container-fluid">
+    <div class="row" style="background-color:bisque;">
+
+    <div class="col-md-6">
+        <h2>Latest Mars News</h2>
+        <h3>{{mars_data.news_title}}</h3>
+        <p>{{mars.news_paragraph}}</p>
+    </div>
+    </div>
+</div>
 
 
-
-
-
-
-
+</body>
 
 
 
