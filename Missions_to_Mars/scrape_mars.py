@@ -76,6 +76,8 @@ def scrape():
         'hemispheres':hemisphere_image_url
 
     }
+    browser.quit()
+
     return mars_data    
 
 
