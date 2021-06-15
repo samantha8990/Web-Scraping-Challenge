@@ -73,8 +73,8 @@ def scrape():
         'news_paragraph': news_paragraph,
         'full_url':full_url,
         'data_frame':data_frame.to_html(),
-        'hemispheres':hemisphere_image_url,
-        'hemisphere':each_image
+        'hemispheres':hemisphere_image_url
+        
 
     }
     browser.quit()
