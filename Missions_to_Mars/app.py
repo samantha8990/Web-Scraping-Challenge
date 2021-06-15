@@ -17,7 +17,7 @@ def home():
 def scrape():
     mars_info=scrape_mars.scrape()
 
-    mongo.db.collection.update({}, mars_data, upsert=True)
+    mongo.db.collection.update({}, mars_info, upsert=True)
 
     return redirect("/")
 
